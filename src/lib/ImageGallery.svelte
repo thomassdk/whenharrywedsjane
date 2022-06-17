@@ -1,5 +1,6 @@
 <script type="ts">
     import { JustifiedGrid } from "@egjs/svelte-grid";
+    import SectionHead from "./SectionHead.svelte";
 
     const gap = 5;
     const defaultDirection = "end";
@@ -8,9 +9,6 @@
     const sizeRange = [200, 1000];
     const isCroppedSize = false;
     const displayedRow = -1;
-
-    let grid;
-    let masonry;
 
     async function get() {
         const images = await import.meta.glob("../assets/photos/*.jpg");
@@ -24,8 +22,12 @@
     }
 </script>
 
+<SectionHead
+    background="https://images.unsplash.com/photo-1629654857513-1136aef1b10f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1403&q=80"
+    title="Image Gallery"
+    id="photos"
+/>
 <div class="wrapper">
-    <h2>Photos</h2>
     {#await get()}
         <p>Waiting</p>
     {:then images}
@@ -50,7 +52,7 @@
         padding: 40px;
     }
 
- h2 {
-     text-align: center;
- }
+    img {
+        border-radius: 4px;
+    }
 </style>
