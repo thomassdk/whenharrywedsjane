@@ -52,7 +52,7 @@
 
 <style>
     .wrapper {
-        padding: 40px;
+        padding: 48px;
     }
 
     img {
