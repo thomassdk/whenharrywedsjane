@@ -1,26 +1,26 @@
 <script>
+    import Section from "./Section.svelte";
     import invite from "../assets/invite.png";
-    import texture from "../assets/french-stucco.png";
 </script>
 
-<div class="wrapper" id="invitation" style="--background: url({texture})">
-    <img src={invite} alt="wedding invitation" />
-</div>
+<Section>
+    <div class="wrapper" id="invitation">
+        <img src={invite} alt="wedding invitation" />
+    </div>
+</Section>
 
 <style>
     .wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%;
-        padding-block: 20px;
-        background-image: var(--background);
+        padding-bottom: 48px;
     }
 
     img {
         margin-inline: 10px;
         object-fit: contain;
-        height: 100%;
+        width: 50%;
         border-radius: 2px;
         box-shadow: 25px 25px 50px 0 white inset, -25px -25px 50px 0 white inset;
     }
