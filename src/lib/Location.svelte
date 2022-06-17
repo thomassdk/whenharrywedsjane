@@ -1,0 +1,99 @@
+<script>
+    import SectionHead from "./SectionHead.svelte";
+    import { ELEVATIONS } from "../constants";
+</script>
+
+<div class="test">
+    <SectionHead
+        title="Location"
+        background="https://images.unsplash.com/photo-1630609083938-3acb39a06392?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        id="location"
+    />
+
+    <p>
+        Our wedding is on Wednesday 28th September at Arundel Town Hall
+        Maltravers Street, Arundel, West Sussex BN18 9AP.
+    </p>
+    <p>
+        Please arrive from 2.15 - 2.45 for a 3pm start Parking in Arundel is a
+        challenge...
+    </p>
+    <div class="wrapper">
+        <div
+            class="column"
+            style="--small-elevation: {ELEVATIONS.small}; --large-elevation: {ELEVATIONS.large}"
+        >
+            <iframe
+                width="600"
+                height="450"
+                style="border:0"
+                loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz3PuIQawdUgRY-pdBBfHL1A&key=AIzaSyAPlbsI-LVWobl3CbFfYMPasPg7LcFmUmM"
+            />
+        </div>
+        <div
+            class="column"
+            style="--small-elevation: {ELEVATIONS.small}; --large-elevation: {ELEVATIONS.large}"
+        >
+            <img
+                src="https://live.staticflickr.com/3899/14844860232_79335e8eae_b.jpg"
+                alt="arundel town hall reception room"
+            />
+        </div>
+    </div>
+</div>
+
+<style>
+    .wrapper {
+        display: flex;
+        padding: 16px;
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+        max-width: 100%;
+    }
+
+    .column {
+        flex: 0 1 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 450px;
+        width: 600px;
+        --shadow-color: 0deg 0% 50%;
+        box-shadow: var(--small-elevation);
+        max-width: 100%;
+    }
+
+    iframe {
+        border-radius: 2px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+    .test {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
+        max-width: 50ch;
+        text-align: center;
+        padding: 16px;
+        font-size: 1.2rem;
+    }
+
+    p:first-of-type {
+        padding-top: 32px;
+    }
+</style>
