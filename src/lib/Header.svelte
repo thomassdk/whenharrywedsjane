@@ -1,4 +1,5 @@
 <script type="ts">
+    let h: number;
     //TODO include header size into this scroll to
     function scrollTo(section: string) {
         var element = document.getElementById(section);
@@ -10,12 +11,12 @@
     }
 </script>
 
-<nav>
-    <button on:click={() => scrollTo("photos")}>Photos</button>
-    <button on:click={() => scrollTo("details")}>Details</button>
-    <button on:click={() => scrollTo("locations")}>Location</button>
+<nav bind:clientHeight={h}>
+    <button on:click={() => scrollTo("invitation")}>Invitation</button>
+    <button on:click={() => scrollTo("photos")}>Image gallery</button>
+    <button on:click={() => scrollTo("schedule")}>Wedding Timeline</button>
+    <button on:click={() => scrollTo("location")}>Location</button>
     <button on:click={() => scrollTo("accomodation")}>Accomodation</button>
-    <button on:click={() => scrollTo("schedule")}>Schedule</button>
 </nav>
 
 <style>
@@ -24,7 +25,8 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
-        position: sticky;
+        position: fixed;
+        width: 100%;
         top: 0;
         padding-block: 1rem;
         background-color: white;
