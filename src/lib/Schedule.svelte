@@ -2,7 +2,6 @@
     import Section from "./Section.svelte";
     import SectionHead from "./SectionHead.svelte";
     import sweetPea from "../assets/sweet_pea_watercolor.png";
-    import "@fontsource/herr-von-muellerhoff";
 
     function formatTime(date: Date) {
         return date.toLocaleString("en-us", {

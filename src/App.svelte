@@ -1,5 +1,7 @@
 <script lang="ts">
     import "@fontsource/montserrat";
+    import "@fontsource/herr-von-muellerhoff";
+
     import Header from "./lib/Header.svelte";
     import ImageGallery from "./lib/ImageGallery.svelte";
     import Invitation from "./lib/Invitation.svelte";
@@ -20,10 +22,6 @@
         font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
             Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
             sans-serif;
-    }
-
-    :global(#app) {
-        height: 100%;
     }
 
     :global(h1) {

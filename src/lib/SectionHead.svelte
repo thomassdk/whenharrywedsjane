@@ -1,6 +1,4 @@
 <script>
-    import "@fontsource/herr-von-muellerhoff";
-
     export let background;
     export let title;
     export let id;
