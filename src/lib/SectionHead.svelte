@@ -26,7 +26,7 @@
         display: grid;
         place-items: center;
         position: relative;
-        scroll-margin: 4rem;
+        scroll-margin: 41px;
     }
 
     h2 {
