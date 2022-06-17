@@ -34,7 +34,7 @@
         {
             name: "The Swan Hotel",
             image: "https://www.swanarundel.co.uk/-/media/sites/microsites/s/the-swan-hotel-arundel-_-p232/images/2019/gallery/01-swan-arundel-2019-46.ashx",
-            url: "https://www.swanarundel.co.uk/bedrooms",
+            url: "https://direct-book.com/arundel/properties/SWANARUNDELDIRECT?locale=en&checkInDate=2022-09-28&numberNights=1&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=GBP&checkOutDate=2022-09-29&trackPage=yes",
             deal: "15% if booked through website or via call\nFST1845",
         },
     ];
