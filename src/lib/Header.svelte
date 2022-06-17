@@ -14,11 +14,18 @@
 </script>
 
 <nav bind:clientHeight={h} style="--background: url({texture})">
-    <button on:click={() => scrollTo("invitation")}>Invitation</button>
-    <button on:click={() => scrollTo("photos")}>Image gallery</button>
-    <button on:click={() => scrollTo("schedule")}>Wedding Timeline</button>
-    <button on:click={() => scrollTo("location")}>Location</button>
-    <button on:click={() => scrollTo("accomodation")}>Accomodation</button>
+    <div class="column">
+        <button class="tag" on:click={() => scrollTo("invitation")}
+            >Harry weds Jane</button
+        >
+    </div>
+    <div class="column">
+        <button on:click={() => scrollTo("photos")}>Image gallery</button>
+        <button on:click={() => scrollTo("schedule")}>Wedding Timeline</button>
+        <button on:click={() => scrollTo("location")}>Location</button>
+        <button on:click={() => scrollTo("accomodation")}>Accomodation</button>
+    </div>
+    <div class="column" />
 </nav>
 
 <style>
@@ -26,14 +33,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
-        position: fixed;
+        position: sticky;
         width: 100%;
         top: 0;
-        padding-block: 1rem;
+        padding: 1rem 30px;
         background-color: white;
         z-index: 1;
         background-image: var(--background);
+    }
+
+    .column {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex: 1;
     }
 
     button {
@@ -46,6 +60,7 @@
         text-align: left;
         font: inherit;
         color: inherit;
+        width: max-content;
     }
 
     button:focus {
@@ -54,5 +69,10 @@
 
     button:focus:not(:focus-visible) {
         outline: none;
+    }
+
+    .tag {
+        font-family: "Herr Von Muellerhoff", cursive;
+        font-size: 2rem;
     }
 </style>
