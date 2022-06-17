@@ -1,8 +1,9 @@
 <script>
     import invite from "../assets/invite.png";
+    import texture from "../assets/french-stucco.png";
 </script>
 
-<div class="wrapper" id="invitation">
+<div class="wrapper" id="invitation" style="--background: url({texture})">
     <img src={invite} alt="wedding invitation" />
 </div>
 
@@ -13,9 +14,11 @@
         align-items: center;
         height: 100%;
         padding-block: 20px;
+        background-image: var(--background);
     }
+
     img {
-        padding-inline: 10px;
+        margin-inline: 10px;
         object-fit: contain;
         height: 100%;
         border-radius: 2px;

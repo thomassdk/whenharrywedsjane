@@ -1,4 +1,5 @@
 <script type="ts">
+    import Section from "./Section.svelte";
     import SectionHead from "./SectionHead.svelte";
     import sweetPea from "../assets/sweet_pea_watercolor.png";
     import "@fontsource/herr-von-muellerhoff";
@@ -50,21 +51,23 @@
     ];
 </script>
 
-<SectionHead
-    title="Wedding timeline"
-    background="https://images.unsplash.com/photo-1629196914375-f7e48f477b6d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=706&q=80"
-    id="schedule"
-/>
-<div class="schedule" style="--divider: url({sweetPea})">
-    {#each Events as event}
-        <div class="event">
-            <h3>{event.text}</h3>
-            <h4>
-                {formatTime(event.date)}
-            </h4>
-        </div>
-    {/each}
-</div>
+<Section>
+    <SectionHead
+        title="Wedding timeline"
+        background="https://images.unsplash.com/photo-1629196914375-f7e48f477b6d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=706&q=80"
+        id="schedule"
+    />
+    <div class="schedule" style="--divider: url({sweetPea})">
+        {#each Events as event}
+            <div class="event">
+                <h3>{event.text}</h3>
+                <h4>
+                    {formatTime(event.date)}
+                </h4>
+            </div>
+        {/each}
+    </div>
+</Section>
 
 <style>
     .event {
@@ -107,5 +110,10 @@
     h4 {
         font-style: italic;
         font-weight: 200;
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
     }
 </style>

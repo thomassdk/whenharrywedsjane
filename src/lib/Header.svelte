@@ -1,4 +1,6 @@
 <script type="ts">
+    import texture from "../assets/french-stucco.png";
+
     let h: number;
     //TODO include header size into this scroll to
     function scrollTo(section: string) {
@@ -11,7 +13,7 @@
     }
 </script>
 
-<nav bind:clientHeight={h}>
+<nav bind:clientHeight={h} style="--background: url({texture})">
     <button on:click={() => scrollTo("invitation")}>Invitation</button>
     <button on:click={() => scrollTo("photos")}>Image gallery</button>
     <button on:click={() => scrollTo("schedule")}>Wedding Timeline</button>
@@ -31,6 +33,7 @@
         padding-block: 1rem;
         background-color: white;
         z-index: 1;
+        background-image: var(--background);
     }
 
     button {

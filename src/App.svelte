@@ -1,6 +1,5 @@
 <script lang="ts">
     import "@fontsource/montserrat";
-
     import Header from "./lib/Header.svelte";
     import ImageGallery from "./lib/ImageGallery.svelte";
     import Invitation from "./lib/Invitation.svelte";
