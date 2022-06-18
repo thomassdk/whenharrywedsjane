@@ -40,7 +40,9 @@
         <button on:click={() => scrollTo("photos")}>Gallery</button>
         <button on:click={() => scrollTo("schedule")}>Timeline</button>
         <button on:click={() => scrollTo("location")}>Location</button>
-        <button on:click={() => scrollTo("accommodation")}>Accommodation</button>
+        <button on:click={() => scrollTo("accommodation")}>Accommodation</button
+        >
+        <button on:click={() => scrollTo("gifts")}>Gifts</button>
     </div>
 
     <div class="column">
@@ -73,9 +75,10 @@
             >
             <button on:click={() => scrollTo("schedule")}>Timeline</button>
             <button on:click={() => scrollTo("location")}>Location</button>
-            <button on:click={() => scrollTo("accommodation")}
-                >Accommodation</button
-            >
+            <button on:click={() => scrollTo("accommodation")}>
+                Accommodation
+            </button>
+            <button on:click={() => scrollTo("gifts")}>Gifts</button>
         </div>
     </Dialog>
 </nav>

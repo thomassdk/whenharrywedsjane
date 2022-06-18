@@ -8,6 +8,7 @@
     import Accommodation from "./lib/Accommodation.svelte";
     import Schedule from "./lib/Schedule.svelte";
     import Location from "./lib/Location.svelte";
+    import Gifts from "./lib/Gifts.svelte";
 </script>
 
 <Header />
@@ -16,6 +17,7 @@
 <Schedule />
 <Location />
 <Accommodation />
+<Gifts />
 
 <style>
     :root {
