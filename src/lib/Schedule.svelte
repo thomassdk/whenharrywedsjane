@@ -5,7 +5,7 @@
 
     function formatTime(date: Date) {
         return date.toLocaleString("en-us", {
-            hour: "2-digit",
+            hour: "numeric",
             minute: "2-digit",
         });
     }
@@ -29,15 +29,15 @@
         },
         {
             date: new Date("2022-09-28T18:30:00"),
-            text: "Speechs & Toasts",
+            text: "Speeches & Toasts",
         },
         {
             date: new Date("2022-09-28T19:30:00"),
-            text: "Move downstairs",
+            text: "Move downstairs to dance floor",
         },
         {
             date: new Date("2022-09-28T20:00:00"),
-            text: "Cake Cutting & First Dance",
+            text: "Cake Cut & First Dance",
         },
         {
             date: new Date("2022-09-28T20:30:00"),
@@ -45,7 +45,7 @@
         },
         {
             date: new Date("2022-09-28T23:00:00"),
-            text: "Farwell to the Bride and Groom",
+            text: "Farewell to the Bride and Groom",
         },
     ];
 </script>

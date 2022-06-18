@@ -12,14 +12,31 @@
         position="top"
     />
 
-    <p>
-        Our wedding is on Wednesday 28th September at Arundel Town Hall
-        Maltravers Street, Arundel, West Sussex BN18 9AP.
-    </p>
-    <p>
-        Please arrive from 2.15 - 2.45 for a 3pm start Parking in Arundel is a
-        challenge...
-    </p>
+    <div class="text">
+        <p>
+            Our wedding is on Wednesday 28th September at Arundel Town Hall,
+            Maltravers Street, Arundel, West Sussex BN18 9AP.
+        </p>
+        <p>Please arrive between 2:15 and 2:45 for a 3pm start.</p>
+        <p>Parking can be a challenge in Arundel Town Center.</p>
+        <p>
+            There are 3 main car parks in Arundel, all within walking distance.
+        </p>
+
+        <ol>
+            <li>Mill Road Car park - Opposite the entrance to the Castle</li>
+            <li>Crown Yard Car park - round the back of Pizza Express</li>
+            <li>Fitzalan Pool Car park - next to the Arundel Lido</li>
+        </ol>
+
+        <p>
+            Also, all of London Road (by the Cathedral) and the road along the
+            river is free of charge car parking all day if you can obtain a
+            space.
+        </p>
+        <p>Hotels and accommodation will have their own parking.</p>
+    </div>
+
     <div class="wrapper">
         <div
             class="column"
@@ -81,15 +98,26 @@
         border-radius: 4px;
     }
 
-    p {
+    .text {
         margin: auto;
         max-width: 50ch;
         text-align: center;
-        padding: 16px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        padding-block: 32px;
+        padding-inline: 8px;
     }
 
-    p:first-of-type {
-        padding-top: 32px;
+    p {
+        padding: 4px;
+    }
+
+    ol {
+        text-align: left;
+        padding: 8px;
+        font-weight: 700;
+    }
+
+    li {
+        padding: 4px;
     }
 </style>
