@@ -5,7 +5,7 @@
     import Header from "./lib/Header.svelte";
     import ImageGallery from "./lib/ImageGallery.svelte";
     import Invitation from "./lib/Invitation.svelte";
-    import Accomodation from "./lib/Accomodation.svelte";
+    import Accommodation from "./lib/Accommodation.svelte";
     import Schedule from "./lib/Schedule.svelte";
     import Location from "./lib/Location.svelte";
 </script>
@@ -15,7 +15,7 @@
 <ImageGallery />
 <Schedule />
 <Location />
-<Accomodation />
+<Accommodation />
 
 <style>
     :root {

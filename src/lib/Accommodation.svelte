@@ -45,7 +45,7 @@
     <SectionHead
         background="https://images.unsplash.com/photo-1629654858857-615c2c8be8a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1494&q=80"
         title="Accommodation"
-        id="accomodation"
+        id="accommodation"
     />
     <div class="grid">
         {#each Hotels as hotel}

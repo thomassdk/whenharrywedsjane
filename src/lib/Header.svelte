@@ -31,7 +31,7 @@
         <button on:click={() => scrollTo("photos")}>Gallery</button>
         <button on:click={() => scrollTo("schedule")}>Timeline</button>
         <button on:click={() => scrollTo("location")}>Location</button>
-        <button on:click={() => scrollTo("accomodation")}>Accomodation</button>
+        <button on:click={() => scrollTo("accommodation")}>Accommodation</button>
     </div>
     <div class="column" />
 </nav>
