@@ -11,17 +11,25 @@
             inline: "nearest",
         });
     }
+
+    function scrollToTop() {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+        });
+    }
 </script>
 
 <nav bind:clientHeight={h} style="--background: url({texture})">
     <div class="column">
-        <button class="tag" on:click={() => scrollTo("invitation")}
+        <button class="tag" on:click={() => scrollToTop()}
             >Harry weds Jane</button
         >
     </div>
     <div class="column">
-        <button on:click={() => scrollTo("photos")}>Image gallery</button>
-        <button on:click={() => scrollTo("schedule")}>Wedding Timeline</button>
+        <button on:click={() => scrollTo("photos")}>Gallery</button>
+        <button on:click={() => scrollTo("schedule")}>Timeline</button>
         <button on:click={() => scrollTo("location")}>Location</button>
         <button on:click={() => scrollTo("accomodation")}>Accomodation</button>
     </div>
