@@ -19,7 +19,7 @@
         </p>
         <p>Please arrive between 2:15 and 2:45 for a 3pm start.</p>
         <p>
-            There are 3 main car parks in Arundel, all within walking distance.
+            There are three car parks in Arundel within walking distance.
         </p>
 
         <ol>
@@ -29,7 +29,7 @@
         </ol>
 
         <p>
-            Also, all of London Road (by the Cathedral) and the road along the
+            Also all of London Road (by the Cathedral) and the road along the
             river is free of charge car parking all day if you can obtain a
             space.
         </p>
