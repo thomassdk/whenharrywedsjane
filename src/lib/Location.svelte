@@ -81,6 +81,7 @@
     }
 
     p {
+        margin: auto;
         max-width: 50ch;
         text-align: center;
         padding: 16px;
