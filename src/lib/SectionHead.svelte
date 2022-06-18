@@ -2,12 +2,16 @@
     export let background;
     export let title;
     export let id;
+    export let position;
 </script>
 
 <div
-    id={id}
+    {id}
     class="wrapper"
-    style="--background: url({background})">
+    style="
+           --background: url({background});
+           --position: {position || 'center'}"
+>
     <div class="blur">
         <h2>{title}</h2>
     </div>
@@ -18,7 +22,7 @@
         height: 10rem;
         width: 100%;
         background-image: var(--background);
-        background-position: center; /* Center the image */
+        background-position: var(--position);
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover;
         display: grid;
