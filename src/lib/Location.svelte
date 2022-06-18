@@ -32,6 +32,7 @@
                 loading="lazy"
                 allowfullscreen
                 src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz3PuIQawdUgRY-pdBBfHL1A&key=AIzaSyAPlbsI-LVWobl3CbFfYMPasPg7LcFmUmM"
+                title="Google Maps of Arundel Town Hall"
             />
         </div>
         <div
