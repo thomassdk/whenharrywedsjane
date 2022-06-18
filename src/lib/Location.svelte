@@ -18,7 +18,6 @@
             Maltravers Street, Arundel, West Sussex BN18 9AP.
         </p>
         <p>Please arrive between 2:15 and 2:45 for a 3pm start.</p>
-        <p>Parking can be a challenge in Arundel Town Center.</p>
         <p>
             There are 3 main car parks in Arundel, all within walking distance.
         </p>
