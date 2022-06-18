@@ -1,5 +1,14 @@
 <script type="ts">
- import texture from "../assets/noise.png";
+    import texture from "../assets/noise.png";
+    import MaterialSymbolsMenu from "~icons/material-symbols/menu";
+    import MaterialSymbolsClose from "~icons/material-symbols/close";
+    import {
+        Dialog,
+        DialogOverlay,
+        DialogTitle,
+        DialogDescription,
+    } from "@rgossiaux/svelte-headlessui";
+    let isOpen = false;
 
     let h: number;
     //TODO include header size into this scroll to
@@ -27,13 +36,48 @@
             >Harry weds Jane</button
         >
     </div>
-    <div class="column">
+    <div class="column laptop">
         <button on:click={() => scrollTo("photos")}>Gallery</button>
         <button on:click={() => scrollTo("schedule")}>Timeline</button>
         <button on:click={() => scrollTo("location")}>Location</button>
         <button on:click={() => scrollTo("accommodation")}>Accommodation</button>
     </div>
-    <div class="column" />
+
+    <div class="column">
+        <div class="mobile-menu">
+            <button on:click={() => (isOpen = true)}>
+                <MaterialSymbolsMenu />
+            </button>
+        </div>
+    </div>
+
+    <Dialog
+        open={isOpen}
+        on:close={() => (isOpen = false)}
+        style={"position: fixed; top: 0; right: 0; left: 0; bottom: 0; isolation: isolate;"}
+    >
+        <DialogOverlay
+            style={"background-color: rgb(0 0 0); opacity: 0.3; height: 100%;"}
+        />
+
+        <div class="dialog-content">
+            <button on:click={() => (isOpen = false)}>
+                <MaterialSymbolsClose />
+            </button>
+
+            <button
+                on:click={() => {
+                    isOpen = false;
+                    scrollTo("photos");
+                }}>Gallery</button
+            >
+            <button on:click={() => scrollTo("schedule")}>Timeline</button>
+            <button on:click={() => scrollTo("location")}>Location</button>
+            <button on:click={() => scrollTo("accommodation")}
+                >Accommodation</button
+            >
+        </div>
+    </Dialog>
 </nav>
 
 <style>
@@ -48,6 +92,21 @@
         background-color: white;
         z-index: 1;
         background-image: var(--background);
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    @media (max-width: 950px) {
+        .column.laptop {
+            display: none;
+        }
+        .mobile-menu {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+        }
     }
 
     .column {
@@ -82,5 +141,14 @@
     .tag {
         font-family: "Herr Von Muellerhoff", cursive;
         font-size: 2rem;
+    }
+
+    .dialog-content {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 75%;
+        background-color: white;
     }
 </style>
