@@ -1,5 +1,5 @@
 <script>
-    import texture from "../assets/french-stucco.png";
+ import texture from "../assets/noise.png"
 </script>
 
 <div class="section" style="--background: url({texture})">

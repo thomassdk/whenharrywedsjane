@@ -1,5 +1,5 @@
 <script type="ts">
-    import texture from "../assets/french-stucco.png";
+ import texture from "../assets/noise.png";
 
     let h: number;
     //TODO include header size into this scroll to
