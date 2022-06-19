@@ -18,9 +18,7 @@
             Maltravers Street, Arundel, West Sussex BN18 9AP.
         </p>
         <p>Please arrive between 2:15 and 2:45 for a 3pm start.</p>
-        <p>
-            There are three car parks in Arundel within walking distance.
-        </p>
+        <p>There are three car parks in Arundel within walking distance.</p>
 
         <ol>
             <li>Mill Road Car park - Opposite the entrance to the Castle</li>
@@ -60,6 +58,15 @@
                 alt="arundel town hall reception room"
             />
         </div>
+    </div>
+    <div class="text">
+        <p>
+            There will be no professional photographer in attendance on the day.
+        </p>
+        <p>
+            We ask that during the ceremony phones are “unplugged” but after
+            the formalities are over, feel free to click away if you so desire.
+        </p>
     </div>
 </Section>
 
