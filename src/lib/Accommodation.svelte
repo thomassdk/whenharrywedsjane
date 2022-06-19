@@ -62,6 +62,19 @@
             </a>
         {/each}
     </div>
+
+    <div class="text">
+        <h4>Taxis</h4>
+        <p>
+            Castle Cars:
+            <a href="tel:01903-884444">01903-884444</a> or
+            <a href="tel:01903-889988">01903-889988</a>
+        </p>
+        <p>
+            Apollo Taxis:
+            <a href="tel:01903-723030">01903-723030</a>
+        </p>
+    </div>
 </Section>
 
 <style>
@@ -122,5 +135,14 @@
         color: inherit;
         text-decoration: none;
         cursor: pointer;
+    }
+
+    .text {
+        margin: auto;
+        max-width: 50ch;
+        text-align: center;
+        font-size: 1.1rem;
+        padding-block: 32px;
+        padding-inline: 8px;
     }
 </style>
