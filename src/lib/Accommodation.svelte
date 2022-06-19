@@ -38,6 +38,11 @@
             url: "https://direct-book.com/arundel/properties/SWANARUNDELDIRECT?locale=en&checkInDate=2022-09-28&numberNights=1&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=GBP&checkOutDate=2022-09-29&trackPage=yes",
             deal: "15% if booked through website or via call\nFST1845",
         },
+        {
+            name: "Comfort Inn",
+            image: "https://www.choicehotels.com/hotelmedia/GB/EN/arundel/GB642/480/GB642EXTERIOR03_1.webp",
+            url: "https://www.choicehotels.com/en-uk/united-kingdom/arundel/comfort-inn-hotels/gb642/rates?checkInDate=2022-09-28&checkOutDate=2022-09-29",
+        }
     ];
 </script>
 
