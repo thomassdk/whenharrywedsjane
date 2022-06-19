@@ -56,7 +56,7 @@
             style="--small-elevation: {ELEVATIONS.small}; --large-elevation: {ELEVATIONS.large}"
         >
             <img
-                src="https://live.staticflickr.com/3899/14844860232_79335e8eae_b.jpg"
+                src="https://www.pureyouphotography.com/lib/uploads/arundel-town-hall-west-sussex-wedding-photographer.jpeg"
                 alt="arundel town hall reception room"
             />
         </div>
