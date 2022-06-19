@@ -2,12 +2,9 @@
     import texture from "../assets/noise.png";
     import MaterialSymbolsMenu from "~icons/material-symbols/menu";
     import MaterialSymbolsClose from "~icons/material-symbols/close";
-    import {
-        Dialog,
-        DialogOverlay,
-        DialogTitle,
-        DialogDescription,
-    } from "@rgossiaux/svelte-headlessui";
+    import { Dialog, DialogOverlay } from "@rgossiaux/svelte-headlessui";
+    import { ELEVATIONS } from "../constants";
+
     let isOpen = false;
 
     let h: number;
@@ -30,7 +27,12 @@
     }
 </script>
 
-<nav bind:clientHeight={h} style="--background: url({texture})">
+<nav
+    bind:clientHeight={h}
+    style="--background: url({texture});
+           --small-elevation: {ELEVATIONS.small};
+          "
+>
     <div class="column">
         <button class="tag" on:click={() => scrollToTop()}
             >Harry weds Jane</button
@@ -95,6 +97,8 @@
         background-color: white;
         z-index: 1;
         background-image: var(--background);
+        --shadow-color: 0deg 0% 50%;
+        box-shadow: var(--small-elevation);
     }
 
     .mobile-menu {
