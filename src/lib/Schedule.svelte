@@ -66,6 +66,14 @@
             </div>
         {/each}
     </div>
+    <div class="note">
+        <p>
+            It is a delight to welcome you to our wedding, many of you traveling
+            from afar.
+        </p>
+        <p>We do not expect gifts.</p>
+        <p>Your presence is what is most important to us.</p>
+    </div>
 </Section>
 
 <style>
@@ -114,5 +122,22 @@
 
     h3 {
         text-align: center;
+    }
+
+    .note {
+        max-width: 50ch;
+        font-size: 0.9rem;
+        font-weight: 200;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        line-height: 1.75;
+        padding-inline: 16px;
+    }
+
+    .note p:first-child::before {
+        content: "*";
+        font-weight: 700;
     }
 </style>
