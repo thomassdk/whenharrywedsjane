@@ -1,19 +1,46 @@
-<script>
-    export let background;
-    export let title;
-    export let id;
-    export let position;
+<script type="ts">
+    export let background: string;
+    export let title: string;
+    export let position = "center";
+
+    import { headerHeight } from "../stores";
+
+    // Clamp number between two values with the following line:
+    const clamp = (num: number, min: number, max: number) =>
+        Math.min(Math.max(num, min), max);
+
+    const whenFadeStarts = 1;
+    const whenFadeEnds = 80;
+    const range = whenFadeEnds - whenFadeStarts;
+
+    let element: HTMLElement;
+    let y: number;
+    let opacity = 1;
+
+    $: if (element) {
+        let relativePosition = element.offsetTop - y;
+        let currentPosition = clamp(
+            Math.abs(relativePosition),
+            whenFadeStarts,
+            whenFadeEnds
+        );
+        let percentChange = Math.abs(currentPosition - whenFadeEnds) / range;
+        opacity = relativePosition > 0 ? 1 - percentChange : 0 + percentChange;
+    }
 </script>
 
+<svelte:window bind:scrollY={y} />
+
 <div
-    {id}
+    bind:this={element}
     class="wrapper"
     style="
            --background: url({background});
-           --position: {position || 'center'}"
+           --position: {position};
+           --height: {$headerHeight * -1}px"
 >
     <div class="blur">
-        <h2>{title}</h2>
+        <h2 style="--opacity: {opacity}">{title}</h2>
     </div>
 </div>
 
@@ -27,14 +54,17 @@
         background-size: cover;
         display: grid;
         place-items: center;
-        position: relative;
-        scroll-margin: 64px;
+        position: sticky;
+        top: var(--height);
+        margin-bottom: 32px;
+        z-index: 1;
     }
 
     h2 {
         font-size: 4rem;
         font-family: "Herr Von Muellerhoff", cursive;
         font-weight: 400;
+        opacity: var(--opacity);
     }
 
     .blur {
