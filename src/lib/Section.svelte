@@ -1,8 +1,9 @@
-<script>
- import texture from "../assets/noise.png"
+<script type="ts">
+    export let id: string;
+    import texture from "../assets/noise.png";
 </script>
 
-<div class="section" style="--background: url({texture})">
+<div {id} class="section" style="--background: url({texture})">
     <slot />
 </div>
 
@@ -10,5 +11,8 @@
     .section {
         min-height: 100%;
         background-image: var(--background);
+        padding-bottom: 50px;
+        isolation: isolate;
+        scroll-margin: 5rem;
     }
 </style>
