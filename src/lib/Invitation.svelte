@@ -3,8 +3,8 @@
     import invite from "../assets/invite.png";
 </script>
 
-<Section>
-    <div class="wrapper" id="invitation">
+<Section id="invitation">
+    <div class="wrapper">
         <img src={invite} alt="wedding invitation" />
     </div>
 </Section>
@@ -14,13 +14,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-bottom: 48px;
+        padding-top: 8px;
+        padding-inline: 8px;
     }
 
     img {
         margin-inline: 10px;
         object-fit: contain;
-        width: 50%;
+        width: max(400px, 50%);
         border-radius: 2px;
         box-shadow: 25px 25px 50px 0 white inset, -25px -25px 50px 0 white inset;
     }

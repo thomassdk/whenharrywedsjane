@@ -4,11 +4,10 @@
     import { ELEVATIONS } from "../constants";
 </script>
 
-<Section>
+<Section id="location">
     <SectionHead
         title="Location"
         background="https://images.unsplash.com/photo-1630609083938-3acb39a06392?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-        id="location"
         position="top"
     />
 
@@ -64,8 +63,8 @@
             There will be no professional photographer in attendance on the day.
         </p>
         <p>
-            We ask that during the ceremony phones are “unplugged” but after
-            the formalities are over, feel free to click away if you so desire.
+            We ask that during the ceremony phones are “unplugged” but after the
+            formalities are over, feel free to click away if you so desire.
         </p>
     </div>
 </Section>
@@ -109,7 +108,6 @@
         max-width: 50ch;
         text-align: center;
         font-size: 1.1rem;
-        padding-block: 32px;
         padding-inline: 8px;
     }
 
@@ -119,11 +117,13 @@
 
     ol {
         text-align: left;
-        padding: 8px;
+        padding: 16px;
         font-weight: 700;
     }
 
     li {
+        list-style: inside;
+        font-size: 0.8rem;
         padding: 4px;
     }
 </style>
