@@ -2,19 +2,23 @@
     import texture from "../assets/noise.png";
     import MaterialSymbolsMenu from "~icons/material-symbols/menu";
     import MaterialSymbolsClose from "~icons/material-symbols/close";
+    import sweetPea from "../assets/sweet_pea_watercolor.png";
     import { Dialog, DialogOverlay } from "@rgossiaux/svelte-headlessui";
     import { ELEVATIONS } from "../constants";
+    import { onMount } from "svelte";
+    import { headerHeight } from "../stores";
 
     let isOpen = false;
-
     let h: number;
-    //TODO include header size into this scroll to
+    onMount(() => headerHeight.set(h));
+
     function scrollTo(section: string) {
+        console.log(section);
         var element = document.getElementById(section);
         element.scrollIntoView({
             behavior: "smooth",
             block: "start",
-            inline: "nearest",
+            inline: "start",
         });
     }
 
@@ -24,6 +28,11 @@
             left: 0,
             behavior: "smooth",
         });
+    }
+
+    function mobileScrollTo(section: string) {
+        isOpen = false;
+        scrollTo(section);
     }
 </script>
 
@@ -44,7 +53,7 @@
         <button on:click={() => scrollTo("location")}>Location</button>
         <button on:click={() => scrollTo("accommodation")}>Accommodation</button
         >
-        <button on:click={() => scrollTo("gifts")}>Gifts</button>
+        <button on:click={() => scrollTo("after")}>Afters</button>
     </div>
 
     <div class="column">
@@ -65,22 +74,31 @@
         />
 
         <div class="dialog-content">
-            <button on:click={() => (isOpen = false)}>
-                <MaterialSymbolsClose />
-            </button>
+            <div class="row close">
+                <button on:click={() => (isOpen = false)}>
+                    <MaterialSymbolsClose />
+                </button>
+            </div>
 
-            <button
-                on:click={() => {
-                    isOpen = false;
-                    scrollTo("photos");
-                }}>Gallery</button
-            >
-            <button on:click={() => scrollTo("schedule")}>Timeline</button>
-            <button on:click={() => scrollTo("location")}>Location</button>
-            <button on:click={() => scrollTo("accommodation")}>
-                Accommodation
-            </button>
-            <button on:click={() => scrollTo("gifts")}>Gifts</button>
+            <div class="row">
+                <button on:click={() => mobileScrollTo("photos")}
+                    >Gallery</button
+                >
+                <button on:click={() => mobileScrollTo("schedule")}
+                    >Timeline</button
+                >
+                <button on:click={() => mobileScrollTo("location")}
+                    >Location</button
+                >
+                <button on:click={() => mobileScrollTo("accommodation")}>
+                    Accommodation
+                </button>
+                <button on:click={() => mobileScrollTo("after")}>Afters</button>
+            </div>
+
+            <div class="row end">
+                <img src={sweetPea} alt="watercolor sweet pea" />
+            </div>
         </div>
     </Dialog>
 </nav>
@@ -95,10 +113,22 @@
         top: 0;
         padding: 1rem 30px;
         background-color: white;
-        z-index: 1;
+        z-index: 2;
         background-image: var(--background);
         --shadow-color: 0deg 0% 50%;
         box-shadow: var(--small-elevation);
+        background: hsl(0deg 0% 100% / 0.95);
+    }
+
+    @supports (backdrop-filter: blur(12px)) {
+        /*
+    The main experience, for Chrome/Safari users.
+    Blurry backdrops.
+  */
+        nav {
+            background: hsl(0deg 0% 100% / 0.5);
+            backdrop-filter: blur(12px);
+        }
     }
 
     .mobile-menu {
@@ -157,5 +187,32 @@
         height: 100%;
         width: 75%;
         background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 32px;
+        align-items: center;
+    }
+
+    .row {
+        flex: 1;
+    }
+
+    .row.close {
+        align-self: flex-end;
+        transform: translate(18px, -18px);
+    }
+
+    .row > button {
+        padding: 16px;
+        text-transform: uppercase;
+    }
+
+    .row.end {
+        align-self: center;
+    }
+
+    img {
+        transform: rotateZ(90deg) translateX(45%);
+        width: 120px;
     }
 </style>
