@@ -144,7 +144,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        position: sticky;
+        position: fixed;
         width: 100%;
         top: 0;
         padding: 1rem 30px;

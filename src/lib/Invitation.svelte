@@ -14,7 +14,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 8px;
+        padding-top: calc(5rem + 8px);
         padding-inline: 8px;
     }
 
