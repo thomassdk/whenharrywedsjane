@@ -41,18 +41,18 @@
             <iframe
                 width="600"
                 height="450"
-                style="border:0"
+                style="border:0;
+                       --small-elevation: {ELEVATIONS.small};
+                       --large-elevation: {ELEVATIONS.large}"
                 loading="lazy"
                 allowfullscreen
                 src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz3PuIQawdUgRY-pdBBfHL1A&key=AIzaSyAPlbsI-LVWobl3CbFfYMPasPg7LcFmUmM"
                 title="Google Maps of Arundel Town Hall"
             />
         </div>
-        <div
-            class="column"
-            style="--small-elevation: {ELEVATIONS.small}; --large-elevation: {ELEVATIONS.large}"
-        >
+        <div class="column">
             <img
+                style="--small-elevation: {ELEVATIONS.small}; --large-elevation: {ELEVATIONS.large}"
                 src="https://www.pureyouphotography.com/lib/uploads/arundel-town-hall-west-sussex-wedding-photographer.jpeg"
                 alt="arundel town hall reception room"
             />
@@ -87,13 +87,13 @@
         align-items: center;
         height: 450px;
         width: 600px;
-        --shadow-color: 0deg 0% 50%;
-        box-shadow: var(--small-elevation);
         max-width: 100%;
     }
 
     iframe {
         border-radius: 2px;
+        --shadow-color: 0deg 0% 50%;
+        box-shadow: var(--small-elevation);
     }
 
     img {
@@ -101,6 +101,8 @@
         height: 100%;
         object-fit: cover;
         border-radius: 4px;
+        --shadow-color: 0deg 0% 50%;
+        box-shadow: var(--small-elevation);
     }
 
     .text {

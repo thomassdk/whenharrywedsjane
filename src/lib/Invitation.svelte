@@ -1,11 +1,16 @@
 <script>
     import Section from "./Section.svelte";
     import invite from "../assets/invite.png";
+    import { ELEVATIONS } from "../constants";
 </script>
 
 <Section id="invitation">
     <div class="wrapper">
-        <img src={invite} alt="wedding invitation" />
+        <img
+            src={invite}
+            alt="wedding invitation"
+            style="--small-elevation: {ELEVATIONS.small}; --large-elevation: {ELEVATIONS.large}"
+        />
     </div>
 </Section>
 
@@ -21,8 +26,9 @@
     img {
         margin-inline: 10px;
         object-fit: contain;
-        width: max(400px, 50%);
+        width: 475px;
         border-radius: 2px;
-        box-shadow: 25px 25px 50px 0 white inset, -25px -25px 50px 0 white inset;
+        --shadow-color: 0deg 0% 50%;
+        box-shadow: var(--large-elevation);
     }
 </style>

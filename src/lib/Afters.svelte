@@ -3,6 +3,7 @@
     import SectionHead from "./SectionHead.svelte";
     import JackieView from "../assets/jackie_view.jpg";
     import WetSuits from "../assets/wetsuit_portrait.jpg";
+    import { ELEVATIONS } from "../constants";
 </script>
 
 <Section id="afters">
@@ -30,7 +31,9 @@
             <iframe
                 width="600"
                 height="450"
-                style="border:0"
+                style="border:0;
+                       --small-elevation: {ELEVATIONS.small};
+                       --large-elevation: {ELEVATIONS.large}"
                 loading="lazy"
                 allowfullscreen
                 src="https://www.google.com/maps/embed/v1/place?q=Angmering%20lodge%20South%20strand%20%20East%20Preston%20West%20Sussex%20%20BN161PW&key=AIzaSyAPlbsI-LVWobl3CbFfYMPasPg7LcFmUmM"
@@ -38,10 +41,18 @@
             />
         </div>
         <div class="column">
-            <img src={JackieView} alt="View from Jackies" />
+            <img
+                src={JackieView}
+                alt="View from Jackies"
+                style="--small-elevation: {ELEVATIONS.small}; --large-elevation: {ELEVATIONS.large}"
+            />
         </div>
         <div class="column">
-            <img src={WetSuits} alt="A wetsuit portrait of the happy couple" />
+            <img
+                src={WetSuits}
+                alt="A wetsuit portrait of the happy couple"
+                style="--small-elevation: {ELEVATIONS.small}; --large-elevation: {ELEVATIONS.large}"
+            />
         </div>
     </div>
 </Section>
@@ -84,6 +95,8 @@
 
     iframe {
         border-radius: 2px;
+        --shadow-color: 0deg 0% 50%;
+        box-shadow: var(--small-elevation);
     }
 
     img {
@@ -91,5 +104,7 @@
         height: 100%;
         object-fit: cover;
         border-radius: 4px;
+        --shadow-color: 0deg 0% 50%;
+        box-shadow: var(--small-elevation);
     }
 </style>

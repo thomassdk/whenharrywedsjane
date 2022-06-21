@@ -1,6 +1,7 @@
 <script type="ts">
     import Section from "./Section.svelte";
     import SectionHead from "./SectionHead.svelte";
+    import { ELEVATIONS } from "../constants";
 
     interface Hotel {
         name: string;
@@ -54,7 +55,9 @@
     <div class="grid">
         {#each Hotels as hotel}
             <a href={hotel.url}>
-                <article>
+                <article
+                    style="--small-elevation: {ELEVATIONS.small}; --large-elevation: {ELEVATIONS.large}"
+                >
                     <h4>{hotel.name}</h4>
                     <figure>
                         <img src={hotel.image} alt={hotel.name} />
@@ -116,6 +119,8 @@
         padding: 8px 32px;
         transition: transform 500ms;
         will-change: transform;
+        --shadow-color: 0deg 0% 50%;
+        box-shadow: var(--small-elevation);
     }
 
     @media not all and (hover: none) {

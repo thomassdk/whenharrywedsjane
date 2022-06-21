@@ -2,6 +2,7 @@
     import { JustifiedGrid } from "@egjs/svelte-grid";
     import Section from "./Section.svelte";
     import SectionHead from "./SectionHead.svelte";
+    import { ELEVATIONS } from "../constants";
 
     const gap = 6;
     const defaultDirection = "end";
@@ -42,7 +43,11 @@
                 {displayedRow}
             >
                 {#each images as image}
-                    <img class="image" src={image} alt="" />
+                    <img
+                        src={image}
+                        alt=""
+                        style="--small-elevation: {ELEVATIONS.small}; --large-elevation: {ELEVATIONS.large}"
+                    />
                 {/each}
             </JustifiedGrid>
         {/await}
@@ -56,5 +61,7 @@
 
     img {
         border-radius: 4px;
+        --shadow-color: 0deg 0% 50%;
+        box-shadow: var(--small-elevation);
     }
 </style>
