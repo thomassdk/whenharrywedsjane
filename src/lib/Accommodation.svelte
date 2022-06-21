@@ -160,6 +160,5 @@
 
     h4 {
         font-size: 1.2rem;
-        text-decoration: underline;
     }
 </style>
