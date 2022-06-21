@@ -162,7 +162,7 @@
     Blurry backdrops.
   */
         nav {
-            background: hsl(0deg 0% 100% / 0);
+            background: hsl(0deg 0% 100% / 0.5);
             backdrop-filter: blur(12px);
         }
     }
