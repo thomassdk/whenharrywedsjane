@@ -83,10 +83,13 @@
 
 <style>
     .grid {
-        padding-inline: max(32px, 10%);
+        --minSize: 200px;
+        margin: auto;
+        max-width: calc(calc(var(--minSize) * 3) + calc(32px * 3));
+        padding-inline: 16px;
         display: grid;
         gap: 32px;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(var(--minSize), 1fr));
     }
 
     .grid > a {
