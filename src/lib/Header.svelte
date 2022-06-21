@@ -8,12 +8,11 @@
     import { ELEVATIONS } from "../constants";
     import { onMount } from "svelte";
     import { fly, fade } from "svelte/transition";
-    import { headerHeight } from "../stores";
+    import { headerHeight, reducedMotion } from "../stores";
     import NavLink from "./NavLink.svelte";
 
     const delayInterval = 220;
     let isOpen = false;
-    $: console.log(isOpen);
     let h: number;
     onMount(() => headerHeight.set(h));
 
@@ -21,7 +20,7 @@
         console.log(section);
         var element = document.getElementById(section);
         element.scrollIntoView({
-            behavior: "smooth",
+            behavior: $reducedMotion ? "auto" : "smooth",
             block: "start",
             inline: "start",
         });
@@ -31,7 +30,7 @@
         window.scroll({
             top: 0,
             left: 0,
-            behavior: "smooth",
+            behavior: $reducedMotion ? "auto" : "smooth",
         });
     }
 
@@ -73,9 +72,7 @@
         on:close={() => (isOpen = false)}
         style={"position: fixed; top: 0; right: 0; left: 0; bottom: 0; isolation: isolate;"}
     >
-        <DialogOverlay
-                style={"height: 100%;"}
-        >
+        <DialogOverlay style={"height: 100%;"}>
             <div
                 style={"background-color: rgb(0 0 0); opacity: 0.3; height: 100%;"}
                 transition:fade={{ duration: 300 }}

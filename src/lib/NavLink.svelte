@@ -1,12 +1,12 @@
 <script type="ts">
     import frame from "../assets/floral_frame_with_golden_leaves.png";
+    import { reducedMotion } from "../stores";
     export let title: string;
 
     function scrollTo(section: string) {
-        console.log(section);
         var element = document.getElementById(section);
         element.scrollIntoView({
-            behavior: "smooth",
+            behavior: $reducedMotion ? "auto" : "smooth",
             block: "start",
             inline: "start",
         });
