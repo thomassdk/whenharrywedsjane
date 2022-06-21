@@ -66,7 +66,7 @@
         border-radius: 1px;
         isolation: isolate;
         opacity: 0;
-        transition: opacity 100ms;
+        transition: opacity 500ms;
     }
 
     .frame1 {
