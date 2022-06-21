@@ -97,7 +97,11 @@
             </div>
 
             <div class="row end">
-                <img src={sweetPea} alt="watercolor sweet pea" />
+                <img
+                    class="mobile-decoration"
+                    src={sweetPea}
+                    alt="watercolor sweet pea"
+                />
             </div>
         </div>
     </Dialog>
@@ -211,7 +215,7 @@
         align-self: center;
     }
 
-    img {
+    .mobile-decoration {
         transform: rotateZ(90deg) translateX(45%);
         width: 120px;
     }
