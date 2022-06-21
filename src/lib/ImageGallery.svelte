@@ -3,7 +3,7 @@
     import Section from "./Section.svelte";
     import SectionHead from "./SectionHead.svelte";
 
-    const gap = 5;
+    const gap = 6;
     const defaultDirection = "end";
     const rowRange = 0;
     const columnRange = [1, 8];
@@ -51,7 +51,7 @@
 
 <style>
     .wrapper {
-        padding: 48px;
+        padding: clamp(6px, 6.1vw - 1.75rem, 48px);
     }
 
     img {
