@@ -36,7 +36,7 @@
             name: "Comfort Inn",
             image: "https://www.choicehotels.com/hotelmedia/GB/EN/arundel/GB642/480/GB642EXTERIOR03_1.webp",
             url: "https://www.choicehotels.com/en-uk/united-kingdom/arundel/comfort-inn-hotels/gb642/rates?checkInDate=2022-09-28&checkOutDate=2022-09-29",
-            deal: "5% discount when wedding is mentioned!",
+            deal: "5% discount",
         },
         {
             name: "Arundel Park Hotel",
