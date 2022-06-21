@@ -3,6 +3,7 @@
     import MaterialSymbolsMenu from "~icons/material-symbols/menu";
     import MaterialSymbolsClose from "~icons/material-symbols/close";
     import sweetPea from "../assets/sweet_pea_watercolor.png";
+    import frame from "../assets/floral_frame_with_golden_leaves.png";
     import { Dialog, DialogOverlay } from "@rgossiaux/svelte-headlessui";
     import { ELEVATIONS } from "../constants";
     import { onMount } from "svelte";
