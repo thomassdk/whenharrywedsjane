@@ -14,8 +14,8 @@
     <div class="text">
         <p>You are invited to put a sociable end to our celebrations.</p>
         <p>
-            Please stay on in Sussex for a while longer and join us from 1pm
-            onwards for a get together by the seaside.
+            Please stay on in Sussex for a while longer and join us on the 29th
+            of September from 1pm onwards for a get together by the seaside.
         </p>
         <p>
             Food, refreshment, swimming in sea or pool, water sports, or just
