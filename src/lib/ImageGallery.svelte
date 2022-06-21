@@ -12,7 +12,7 @@
     const displayedRow = -1;
 
     async function get() {
-        const images = await import.meta.glob("../assets/photos/*.jpg");
+        const images = import.meta.glob("../assets/photos/*.jpg");
         const imageDataPromises = Object.keys(images).map((path) =>
             images[path]()
         );
