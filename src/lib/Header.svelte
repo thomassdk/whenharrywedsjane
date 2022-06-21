@@ -228,6 +228,7 @@
         flex-direction: column;
         padding: 32px;
         align-items: center;
+        border-radius: 1px;
     }
 
     .row {
