@@ -212,6 +212,14 @@
     .tag {
         font-family: "Herr Von Muellerhoff", cursive;
         font-size: 2rem;
+        color: black;
+        transition: color 500ms;
+    }
+
+    .tag:hover {
+        color: #d1c3a9;
+        transition: color 200ms;
+        filter: saturate(12);
     }
 
     .dialog-content {
@@ -249,8 +257,5 @@
     .mobile-decoration {
         transform: rotateZ(90deg) translateX(45%);
         width: 120px;
-    }
-
-    .mobile-link {
     }
 </style>
