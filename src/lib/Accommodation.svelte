@@ -89,6 +89,17 @@
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
+    .grid > a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .grid > a:hover {
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
     article {
         text-align: center;
         display: flex;
