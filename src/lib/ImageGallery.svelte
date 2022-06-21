@@ -51,7 +51,7 @@
 
 <style>
     .wrapper {
-        padding: clamp(6px, 6.1vw - 1.75rem, 48px);
+        padding-inline: clamp(6px, 6.1vw - 1.75rem, 48px);
     }
 
     img {

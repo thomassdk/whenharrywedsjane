@@ -56,7 +56,7 @@
         place-items: center;
         position: sticky;
         top: var(--height);
-        margin-bottom: 32px;
+        margin-bottom: 48px;
         z-index: 1;
     }
 
