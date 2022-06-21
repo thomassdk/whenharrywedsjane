@@ -6,7 +6,7 @@
     import ImageGallery from "./lib/ImageGallery.svelte";
     import Invitation from "./lib/Invitation.svelte";
     import Accommodation from "./lib/Accommodation.svelte";
-    import Schedule from "./lib/Schedule.svelte";
+    import Timeline from "./lib/Timeline.svelte";
     import Location from "./lib/Location.svelte";
     import Afters from "./lib/Afters.svelte";
 </script>
@@ -14,7 +14,7 @@
 <Header />
 <Invitation />
 <ImageGallery />
-<Schedule />
+<Timeline />
 <Location />
 <Accommodation />
 <Afters />

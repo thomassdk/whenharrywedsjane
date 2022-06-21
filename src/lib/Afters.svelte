@@ -5,7 +5,7 @@
     import WetSuits from "../assets/wetsuit_portrait.jpg";
 </script>
 
-<Section id="after">
+<Section id="afters">
     <SectionHead
         title="Ever the day after"
         background="https://images.unsplash.com/photo-1554755229-ca4470e07232?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"

@@ -8,6 +8,7 @@
     import { ELEVATIONS } from "../constants";
     import { onMount } from "svelte";
     import { headerHeight } from "../stores";
+    import NavLink from "./NavLink.svelte";
 
     let isOpen = false;
     let h: number;
@@ -49,12 +50,11 @@
         >
     </div>
     <div class="column laptop">
-        <button on:click={() => scrollTo("photos")}>Gallery</button>
-        <button on:click={() => scrollTo("schedule")}>Timeline</button>
-        <button on:click={() => scrollTo("location")}>Location</button>
-        <button on:click={() => scrollTo("accommodation")}>Accommodation</button
-        >
-        <button on:click={() => scrollTo("after")}>Afters</button>
+        <NavLink title="gallery" />
+        <NavLink title="timeline" />
+        <NavLink title="location" />
+        <NavLink title="accommodation" />
+        <NavLink title="afters" />
     </div>
 
     <div class="column">
@@ -82,10 +82,10 @@
             </div>
 
             <div class="row">
-                <button on:click={() => mobileScrollTo("photos")}
+                <button on:click={() => mobileScrollTo("gallery")}
                     >Gallery</button
                 >
-                <button on:click={() => mobileScrollTo("schedule")}
+                <button on:click={() => mobileScrollTo("timeline")}
                     >Timeline</button
                 >
                 <button on:click={() => mobileScrollTo("location")}
@@ -94,7 +94,7 @@
                 <button on:click={() => mobileScrollTo("accommodation")}>
                     Accommodation
                 </button>
-                <button on:click={() => mobileScrollTo("after")}>Afters</button>
+                <button on:click={() => mobileScrollTo("afters")}>Afters</button>
             </div>
 
             <div class="row end">
@@ -155,7 +155,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 20px;
         flex: 1;
     }
 
@@ -170,6 +169,7 @@
         font: inherit;
         color: inherit;
         width: max-content;
+        position: relative;
     }
 
     button:focus {
