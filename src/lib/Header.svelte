@@ -7,10 +7,13 @@
     import { Dialog, DialogOverlay } from "@rgossiaux/svelte-headlessui";
     import { ELEVATIONS } from "../constants";
     import { onMount } from "svelte";
+    import { fly, fade } from "svelte/transition";
     import { headerHeight } from "../stores";
     import NavLink from "./NavLink.svelte";
 
+    const delayInterval = 220;
     let isOpen = false;
+    $: console.log(isOpen);
     let h: number;
     onMount(() => headerHeight.set(h));
 
@@ -71,10 +74,15 @@
         style={"position: fixed; top: 0; right: 0; left: 0; bottom: 0; isolation: isolate;"}
     >
         <DialogOverlay
-            style={"background-color: rgb(0 0 0); opacity: 0.3; height: 100%;"}
-        />
+                style={"height: 100%;"}
+        >
+            <div
+                style={"background-color: rgb(0 0 0); opacity: 0.3; height: 100%;"}
+                transition:fade={{ duration: 300 }}
+            />
+        </DialogOverlay>
 
-        <div class="dialog-content">
+        <div class="dialog-content" transition:fly={{ x: 200, duration: 500 }}>
             <div class="row close">
                 <button on:click={() => (isOpen = false)}>
                     <MaterialSymbolsClose />
@@ -82,23 +90,46 @@
             </div>
 
             <div class="row">
-                <button on:click={() => mobileScrollTo("gallery")}
-                    >Gallery</button
+                <button
+                    on:click={() => mobileScrollTo("gallery")}
+                    class="mobile-link"
+                    in:fade={{ delay: delayInterval * 1 }}
                 >
-                <button on:click={() => mobileScrollTo("timeline")}
-                    >Timeline</button
+                    Gallery
+                </button>
+                <button
+                    on:click={() => mobileScrollTo("timeline")}
+                    class="mobile-link"
+                    in:fade={{ delay: delayInterval * 2 }}
                 >
-                <button on:click={() => mobileScrollTo("location")}
-                    >Location</button
+                    Timeline
+                </button>
+                <button
+                    on:click={() => mobileScrollTo("location")}
+                    class="mobile-link"
+                    in:fade={{ delay: delayInterval * 3 }}
                 >
-                <button on:click={() => mobileScrollTo("accommodation")}>
+                    Location
+                </button>
+                <button
+                    on:click={() => mobileScrollTo("accommodation")}
+                    class="mobile-link"
+                    in:fade={{ delay: delayInterval * 4 }}
+                >
                     Accommodation
                 </button>
-                <button on:click={() => mobileScrollTo("afters")}>Afters</button>
+                <button
+                    on:click={() => mobileScrollTo("afters")}
+                    class="mobile-link"
+                    in:fade={{ delay: delayInterval * 5 }}
+                >
+                    Afters
+                </button>
             </div>
 
             <div class="row end">
                 <img
+                    in:fade={{ delay: delayInterval * 6.5 }}
                     class="mobile-decoration"
                     src={sweetPea}
                     alt="watercolor sweet pea"
@@ -220,5 +251,8 @@
     .mobile-decoration {
         transform: rotateZ(90deg) translateX(45%);
         width: 120px;
+    }
+
+    .mobile-link {
     }
 </style>
