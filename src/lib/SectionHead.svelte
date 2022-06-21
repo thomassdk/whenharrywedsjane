@@ -9,8 +9,8 @@
     const clamp = (num: number, min: number, max: number) =>
         Math.min(Math.max(num, min), max);
 
-    const whenFadeStarts = 1;
-    const whenFadeEnds = 80;
+    const whenFadeStarts = 10;
+    const whenFadeEnds = -50;
     const range = whenFadeEnds - whenFadeStarts;
 
     let element: HTMLElement;
@@ -20,12 +20,12 @@
     $: if (element) {
         let relativePosition = element.offsetTop - y;
         let currentPosition = clamp(
-            Math.abs(relativePosition),
-            whenFadeStarts,
-            whenFadeEnds
+            relativePosition,
+            whenFadeEnds,
+            whenFadeStarts
         );
-        let percentChange = Math.abs(currentPosition - whenFadeEnds) / range;
-        opacity = relativePosition > 0 ? 1 - percentChange : 0 + percentChange;
+        let percentChange = -(Math.abs(currentPosition - whenFadeEnds) / range);
+        opacity = percentChange;
     }
 </script>
 
