@@ -157,4 +157,9 @@
         padding-inline: 8px;
         line-height: 2;
     }
+
+    h4 {
+        font-size: 1.2rem;
+        text-decoration: underline;
+    }
 </style>
