@@ -21,11 +21,13 @@
         align-items: center;
         padding-top: calc(5rem + 8px);
         padding-inline: 8px;
+
     }
 
     img {
         margin-inline: 10px;
         object-fit: contain;
+        aspect-ratio: 1 / 1.4142;
         width: 475px;
         border-radius: 2px;
         --shadow-color: 0deg 0% 50%;
