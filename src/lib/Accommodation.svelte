@@ -163,6 +163,10 @@
         line-height: 2;
     }
 
+    .text a {
+        white-space: nowrap;
+    }
+
     h4 {
         font-size: 1.2rem;
     }
