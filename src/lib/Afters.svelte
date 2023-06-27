@@ -36,7 +36,7 @@
                        --large-elevation: {ELEVATIONS.large}"
                 loading="lazy"
                 allowfullscreen
-                src="https://www.google.com/maps/embed/v1/place?q=Angmering%20lodge%20South%20strand%20%20East%20Preston%20West%20Sussex%20%20BN161PW&key=AIzaSyAPlbsI-LVWobl3CbFfYMPasPg7LcFmUmM"
+                src="https://www.google.com/maps/embed/v1/place?q=Angmering%20lodge%20South%20strand%20%20East%20Preston%20West%20Sussex%20%20BN161PW&key=<add-api-key>"
                 title="Jackie & Steve's Location"
             />
         </div>
