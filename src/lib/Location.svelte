@@ -46,7 +46,7 @@
                        --large-elevation: {ELEVATIONS.large}"
                 loading="lazy"
                 allowfullscreen
-                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz3PuIQawdUgRY-pdBBfHL1A&key=AIzaSyAPlbsI-LVWobl3CbFfYMPasPg7LcFmUmM"
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz3PuIQawdUgRY-pdBBfHL1A&key=<add-key>"
                 title="Google Maps of Arundel Town Hall"
             />
         </div>
